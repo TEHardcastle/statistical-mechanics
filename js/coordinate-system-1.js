@@ -73,6 +73,8 @@ function updateCentreOfMass(pointAXValue, pointBXValue, pointAYValue, pointBYVal
     document.getElementById("comYValue").innerHTML = convertY(centreOfMassY).toPrecision(4);
     document.getElementById("separationAB").innerHTML = vectorMagnitude.toPrecision(4);
 
+    let opposite = distanceY;
+    let hypotenuse = vectorMagnitude;
     let vectorDirection = radians_to_degrees(Math.asin(distanceY / vectorMagnitude));
     if (distanceX < 0 && distanceY > 0){
         vectorDirection = 180 - parseFloat(vectorDirection);
@@ -83,7 +85,7 @@ function updateCentreOfMass(pointAXValue, pointBXValue, pointAYValue, pointBYVal
     else if (distanceX > 0 && distanceY < 0){
         vectorDirection = 360 + parseFloat(vectorDirection);
     }
-    document.getElementById("angleAB").innerHTML = vectorDirection.toPrecision(4);
+    document.getElementById("angleAB").innerHTML =  vectorDirection.toPrecision(4);
 }
 
 function resetPoints(){
