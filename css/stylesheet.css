@@ -1,0 +1,42 @@
+body {
+  background-color: powderblue;
+}
+
+h1, p {
+    text-align: center;
+}
+
+svg {
+    margin: auto;
+    display: block;
+}
+
+table, th, td {
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.button {
+    background-color: #4C0050;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 15px 45px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    box-shadow: 9px 9px #999;
+    margin: auto;
+}
+
+.button:hover {
+    background-color: #3E0042
+}
+
+.button:active {
+    background-color: #300034;
+    box-shadow: 0 0 #666;
+    transform: translateY(9px) translateX(9px);
+}

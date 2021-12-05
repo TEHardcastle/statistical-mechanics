@@ -3,23 +3,7 @@
 
 <head>
 	<script src="../js/coordinate-system-1.js"></script>
-	<style>
-		table, th, td {
-  		border: 2px solid black;
-  		border-collapse: collapse;
-		}
-		.column {
- 			float: left;
- 			width: 50%;
-		}
-
-		/* Clear floats after the columns */
-		.row:after {
- 			content: "";
- 			display: table;
- 			clear: both;
-		}
-	</style>
+	<link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 
 <body>
@@ -67,7 +51,7 @@
 
 
 
-	<table style="text-align:center;">
+	<table>
 		<tr style="background-color:#bbbbbb;">
 			<th width = 160px >Co-ordinate</th>
     		<th width = 100px>Value</th>
@@ -106,7 +90,7 @@
 	</table>
 
 	<br>
-	<input type="button" value = "Reset" id="buttonReset" onclick="resetPoints()"></input>
+	<input class="button" type="button" value = "Reset" id="buttonReset" onclick="resetPoints()"></input>
 
 
 	<br><br>
