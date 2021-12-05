@@ -1,6 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 
+<head>
+	<script src="../js/coordinate-system-1.js"></script>
+	<style>
+		table, th, td {
+  		border: 2px solid black;
+  		border-collapse: collapse;
+		}
+	</style>
+</head>
+
+<head>
+	<script src="../js/coordinate-system-1.js"></script>
+</head>
+
 <body>
 
 	<h1>Co-ordinate Systems</h1>
@@ -9,21 +23,23 @@
 		Lorem ipsum
 	</p>
 
-    <svg width = "500" height = "500">
+    <svg	onload = makeDraggable(evt)
+			width = "500" height = "500">
+
         <rect   x = "5"      y = "5"
                 width = "490" height = "490"
 				fill = "white"
 				stroke = "black"
 				stroke-width = "3" />
 		<line   id = "lineSection"
-		        x1 = "50" y1 = "450"
+		        x1 = "54" y1 = "446"
 		        x2 = "250" y2 = "250"
 				stroke = "black"
 				stroke-width = "2"
 				/>
 		<circle id = "pointA"
-				cx = "50"
-				cy = "450"
+				cx = "54"
+				cy = "446"
 				r = "7"
 				stroke = "black"
 				stroke-width = "1"
@@ -35,28 +51,58 @@
 				stroke = "black"
 				stroke-width = "1"
 				fill = "blue" />
+		<circle id = "centreOfMass"
+				cx = "152"
+				cy = "348"
+				r = "3"
+				fill = "black" />
     </svg>
+
+
+
+	<table>
+		<tr>
+			<th>Co-ordinate</th>
+    		<th>Value</th>
+			<th width = 5px style="background-color:#505050"></th>
+			<th>Co-ordinate</th>
+    		<th>Value</th>
+  		</tr>
+  		<tr>
+    		<td>x<sub>red</sub></td>
+			<td id = "pointAXValue"> 10.00 </td>
+			<td width = 5px style="background-color:#505050"></td>
+			<td>x<sub>com</sub></td>
+			<td id = "comXValue"> 30.00 </td>
+		</tr>
+		<tr>
+    		<td>y<sub>red</sub></td>
+			<td id = "pointAYValue"> 10.00 </td>
+			<td width = 5px style="background-color:#505050"></td>
+			<td>y<sub>com</sub></td>
+			<td id = "comYValue"> 30.00 </td>
+		</tr>
+		<tr>
+			<td>x<sub>blue</sub></td>
+			<td id = "pointBXValue"> 50.00 </td>
+			<td width = 5px style="background-color:#505050"></td>
+			<td>d<sub>red-blue</sub></td>
+			<td id = "separationAB"> 56.57 </td>
+  		</tr>
+  		<tr>
+			<td>y<sub>blue</sub></td>
+    		<td id = "pointBYValue"> 50.00 </td>
+			<td width = 5px style="background-color:#505050"></td>
+			<td>&theta;</td>
+			<td id = "angleAB"> 45.00 </td>
+  		</tr>
+	</table>
+
 	<br>
-	<h4>Point A</h4>
-	<label>X Value:</label>
-	<input type="text" id="inputPointAXValue" value=0.75>
-	<br>
-	<label>Y Value:</label>
-	<input type="text" id="inputPointAYValue" value=0.75>
-	<br>
-	<input type="button" value="Draw" id="buttonSetPointA"></input>
-	<br>
-	<h4>Point B</h4>
-	<label>X Value:</label>
-	<input type="text" id="inputPointBXValue" value=0.75>
-	<br>
-	<label>Y Value:</label>
-	<input type="text" id="inputPointBYValue" value=0.75>
-	<br>
-	<input type="button" value="Draw" id="buttonSetPointB"></input>
+	<input type="button" value = "Reset" id="buttonReset" onclick="resetPoints()"></input>
+
 	<br><br>
 	<a href="../main.html">back</a>
-	<script src="../js/coordinate-system-1.js"></script>
 </body>
 
 </html>
