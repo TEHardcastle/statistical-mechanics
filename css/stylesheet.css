@@ -1,9 +1,13 @@
-body {
-  background-color: powderblue;
+h1  {
+    text-align: center;
+    font-family: sans-serif;
 }
 
-h1, p {
+p   {
     text-align: center;
+    font-family: sans-serif;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 svg {
@@ -16,13 +20,14 @@ table, th, td {
     border: 2px solid black;
     border-collapse: collapse;
     text-align: center;
+    font-family: "Courier New", monospace;
 }
 
-.button {
-    background-color: #4C0050;
-    border: none;
-    border-radius: 15px;
-    color: white;
+.scriptButton {
+    background-color: #EEEEEE;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
     padding: 15px 45px;
     text-align: center;
     display: block;
@@ -31,12 +36,37 @@ table, th, td {
     margin: auto;
 }
 
-.button:hover {
-    background-color: #3E0042
+.scriptButton:hover {
+    background-color: #EEEEEE
 }
 
-.button:active {
-    background-color: #300034;
+.scriptButton:active {
+    background-color: #666666;
+    color: #EEEEEE;
+    box-shadow: 0 0 #666666;
+    transform: translateY(9px) translateX(9px);
+}
+
+.navigationButton {
+    background-color: #444444;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 45px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 16px;
+    box-shadow: 9px 9px #999;
+    width: 60px;
+}
+
+.navigationButton:hover {
+    background-color: #222222;
+}
+
+.navigationButton:active {
+    background-color: #000000;
     box-shadow: 0 0 #666;
     transform: translateY(9px) translateX(9px);
 }

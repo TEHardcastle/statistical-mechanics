@@ -11,7 +11,10 @@
 	<h1>Co-ordinate Systems</h1>
 
 	<p>
-		Lorem ipsum
+		This diagram demonstrates that collections of points (ie atoms) can be described with different co-ordinate systems. Here, two points, <span style="color:red">A</span> and <span style="color:blue">B</span>, are simultaneously represented with two different systems.
+	</p>
+	<p>
+		The table on the left uses the x and y co-ordinates of each of the points. The table on the right uses the x and y co-ordinates of the centroid of the two points, and the magnitude (d<sub>A-B</sub>) and direction (&theta;) of the line between the two points. The direction of the line is defined as the anti-clockwise angle between the line and the x-axis if the line was shifted so point A sits on the origin.
 	</p>
 
     <svg	onload = makeDraggable(evt)
@@ -35,6 +38,12 @@
 				stroke = "black"
 				stroke-width = "1"
 				fill = "red" />
+		<text	id = "pointALabel"
+				font-size = "15"
+				font-family = "sans-serif"
+				x = "48" y = "430">
+				A
+			</text>
 		<circle id = "pointB"
 				cx = "250"
 				cy = "250"
@@ -42,14 +51,18 @@
 				stroke = "black"
 				stroke-width = "1"
 				fill = "blue" />
-		<circle id = "centreOfMass"
+		<text	id = "pointBLabel"
+				font-size = "15"
+				font-family = "sans-serif"
+				x = "244" y = "234">
+				B
+				</text>
+		<circle id = "centroid"
 				cx = "152"
 				cy = "348"
 				r = "3"
 				fill = "black" />
     </svg>
-
-
 
 	<table>
 		<tr style="background-color:#bbbbbb;">
@@ -60,28 +73,28 @@
     		<th width = 100px>Value</th>
   		</tr>
   		<tr>
-    		<td>x<sub>red</sub></td>
+    		<td>x<sub>A</sub></td>
 			<td id = "pointAXValue"> 10.00 </td>
 			<td style="background-color:#505050;"></td>
-			<td>x<sub>com</sub></td>
-			<td id = "comXValue"> 30.00 </td>
+			<td>x<sub>centroid</sub></td>
+			<td id = "centroidXValue"> 30.00 </td>
 		</tr>
 		<tr>
-    		<td>y<sub>red</sub></td>
+    		<td>y<sub>A</sub></td>
 			<td id = "pointAYValue"> 10.00 </td>
 			<td style="background-color:#505050;"></td>
-			<td>y<sub>com</sub></td>
-			<td id = "comYValue"> 30.00 </td>
+			<td>y<sub>centroid</sub></td>
+			<td id = "centroidYValue"> 30.00 </td>
 		</tr>
 		<tr>
-			<td>x<sub>blue</sub></td>
+			<td>x<sub>B</sub></td>
 			<td id = "pointBXValue"> 50.00 </td>
 			<td style="background-color:#505050;"></td>
-			<td>d<sub>red-blue</sub></td>
+			<td>d<sub>A-B</sub></td>
 			<td id = "separationAB"> 56.57 </td>
   		</tr>
   		<tr>
-			<td>y<sub>blue</sub></td>
+			<td>y<sub>B</sub></td>
     		<td id = "pointBYValue"> 50.00 </td>
 			<td style="background-color:#505050;"></td>
 			<td>&theta;</td>
@@ -90,11 +103,11 @@
 	</table>
 
 	<br>
-	<input class="button" type="button" value = "Reset" id="buttonReset" onclick="resetPoints()"></input>
+	<input class="scriptButton" type="button" value = "Reset" id="buttonReset" onclick="resetPoints()"></input>
 
 
 	<br><br>
-	<a href="../main.html">back</a>
+	<a href="../main.html" class=navigationButton>Back</a>
 </body>
 
 </html>
