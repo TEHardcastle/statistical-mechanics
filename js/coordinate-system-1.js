@@ -138,32 +138,3 @@ function convertX(x_in){
 function convertY(y_in){
     return (495 - y_in) / 4.9;
 }
-
-function oldConvertY(y_in){
-    let y_out;
-    if (y_in < 0){
-        y_out = 495;
-    }
-    else if (y_in > 99){
-        y_out = 5;
-    }
-    else {
-        y_out = 495 - (parseFloat(y_in)*4.9);
-    }
-    return y_out;
-}
-
-function oldConvertX(x_in){
-    // This converts coordinates on the 100 * 100 graph to SVG positions
-    let x_out;
-    if (x_in < 0){
-        x_out = 5;
-    }
-    else if (x_in > 99){
-        x_out = 495;
-    }
-    else {
-        x_out = 5 + (parseFloat(x_in)*4.9);
-    }
-    return x_out;
-}
